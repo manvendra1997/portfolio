@@ -299,39 +299,7 @@
 
 
     <!-- Contact -->
-     <?php
-      $result=" ";
-      if(isset($_POST['submit'])){
-        require 'phpmailer/PHPMailerAutoload.php';
-        $mail= new PHPMailer;
-        $mail ->Host='smtp-gmail.com';
-        $mail->Port=587;
-        $mail->SMTAuth=true;
-        $email->SMTPSecure='tls';
-        $mail->Username='manvendramonu445@gmail.com';
-        $mail->Password='1234';
 
-
-        $mail->setForm($_POST['email'],$_POST['name']);
-        $mail->addAddress('manvendras803@gmail.com');
-        $mail->addReplyTo($_POST['email'],$_POST['name']);
-
-        $mail->isHTML(true);
-        $email->subject='Form Submission: '.$_POST['subject'];
-        $mail->Body='<h1 align=center> Name: '.$_POST['name'].'<br>Email:'.$_POST['email'].'<br> Message: '.$_POST['msg'].'</h1>';
-
-        if(!$mail->send()){
-          $result="Somthing  went wrong.Please try again";
-
-        }
-        else{
-          $result="Thanks".$_POST['name']."for contacting us.w'll get back to you soon!";
-        }
-
- 
-      }
-
-     ?>
 
 
     <div class="collapse" id="Contact">
@@ -349,7 +317,7 @@
                              <span class="input-group-addon bg-warning text-white p-3">
                             <i class="fa fa-user  "></i>
                           </span>
-                            <input type="text" name="name" class="form-control bg-dark text-white" placeholder="Name">
+                            <input type="text" name="" class="form-control bg-dark text-white" placeholder="Name">
                         </div>         
                    </div>
                     <div class="form-group">
@@ -357,7 +325,7 @@
                              <span class="input-group-addon bg-warning text-white p-3">
                             <i class="fa fa-envelope  "></i>
                           </span>
-                            <input type="email" name="email" class="form-control bg-dark text-white" placeholder="Email">
+                            <input type="text" name="" class="form-control bg-dark text-white" placeholder="Email">
                         </div>         
                    </div>
                     <div class="form-group">
@@ -365,10 +333,10 @@
                              <span class="input-group-addon bg-warning text-white p-3">
                             <i class="fa fa-envelope  "></i>
                           </span>
-                            <input type="text" name="subject" class="form-control bg-dark text-white" placeholder="Massage">
+                            <input type="text" name="" class="form-control bg-dark text-white" placeholder="Massage">
                         </div>         
                    </div>
-                   <input type="submit" name="submit" id="submit" class="btn btn-danger" value="Send">
+                   <input type="submit" name="" class="btn btn-danger" value="Send">
 
 
                       </div>  
